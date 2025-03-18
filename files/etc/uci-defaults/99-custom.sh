@@ -91,6 +91,8 @@ elif [ "$count" -gt 1 ]; then
    fi
 fi
 
+# 设置dnsmasq绑定非全部地址<去掉单选框>
+uci set dhcp.@dnsmasq[0].nonwildcard='0'
 
 # 设置所有网口可访问网页终端
 #uci delete ttyd.@ttyd[0].interface
