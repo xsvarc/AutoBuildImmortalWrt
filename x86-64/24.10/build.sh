@@ -42,6 +42,9 @@ PACKAGES="$PACKAGES openssh-sftp-server"
 PACKAGES="$PACKAGES fdisk"
 PACKAGES="$PACKAGES script-utils"
 #PACKAGES="$PACKAGES luci-i18n-samba4-zh-cn"
+# passwall2透明代理依赖
+PACKAGES="$PACKAGES kmod-nft-socket"
+PACKAGES="$PACKAGES kmod-nft-tproxy"
 # custom
 PACKAGES="$PACKAGES luci-i18n-upnp-zh-cn"
 PACKAGES="$PACKAGES luci-proto-wireguard"
@@ -51,7 +54,7 @@ PACKAGES="$PACKAGES luci-i18n-vlmcsd-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-wol-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-nlbwmon-zh-cn"
 PACKAGES="$PACKAGES bind-dig"
-#PACKAGES="$PACKAGES tcping"
+PACKAGES="$PACKAGES tcping"
 
 # 判断是否需要编译 Docker 插件
 if [ "$INCLUDE_DOCKER" = "yes" ]; then
