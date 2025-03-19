@@ -45,6 +45,7 @@ PACKAGES="$PACKAGES script-utils"
 # passwall2透明代理依赖
 PACKAGES="$PACKAGES kmod-nft-socket"
 PACKAGES="$PACKAGES kmod-nft-tproxy"
+#PACKAGES="$PACKAGES kmod-tun"            # 是否需要
 # custom
 PACKAGES="$PACKAGES luci-i18n-upnp-zh-cn"
 PACKAGES="$PACKAGES luci-proto-wireguard"
@@ -52,7 +53,8 @@ PACKAGES="$PACKAGES luci-i18n-ddns-zh-cn"
 PACKAGES="$PACKAGES ddns-scripts-cloudflare"
 PACKAGES="$PACKAGES luci-i18n-vlmcsd-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-wol-zh-cn"
-PACKAGES="$PACKAGES luci-i18n-nlbwmon-zh-cn"
+#PACKAGES="$PACKAGES luci-i18n-nlbwmon-zh-cn" #无法正常显示数据
+PACKAGES="$PACKAGES luci-i18n-vnstat2-zh-cn"
 PACKAGES="$PACKAGES bind-dig"
 PACKAGES="$PACKAGES tcping"
 
