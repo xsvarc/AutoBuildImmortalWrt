@@ -91,8 +91,26 @@ elif [ "$count" -gt 1 ]; then
    fi
 fi
 
+#custom
 # 设置dnsmasq绑定非全部地址<去掉单选框>
 uci set dhcp.@dnsmasq[0].nonwildcard='0'
+
+#禁用通告该设备为 IPv6 DNS 服务器
+uci del dhcp.lan.ra_slaac
+uci del dhcp.lan.dhcpv6
+uci set dhcp.lan.dns_service='0'
+
+#禁用IPv6 分配长度,即给lan口分配IPv6,默认分配60
+uci del network.lan.ip6assign
+#禁用委托 IPv6 前缀
+uci set network.lan.delegate='0'
+
+#取消RA标记中其他配置(O)
+uci del dhcp.lan.ra_flags
+uci add_list dhcp.lan.ra_flags='none'
+#禁用SlAAC
+uci set dhcp.lan.ra_slaac='0'
+
 
 # 设置所有网口可访问网页终端
 #uci delete ttyd.@ttyd[0].interface
