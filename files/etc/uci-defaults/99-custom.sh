@@ -117,6 +117,10 @@ uci add_list dhcp.lan.ra_flags='none'
 #禁用SlAAC
 uci set dhcp.lan.ra_slaac='0'
 
+# KMS服务自启
+uci del vlmcsd.config.internet_access
+uci set vlmcsd.config.enabled='1'
+uci set vlmcsd.config.auto_activate='1'
 
 # 设置所有网口可访问网页终端
 #uci delete ttyd.@ttyd[0].interface
@@ -127,7 +131,7 @@ uci commit
 
 # 设置编译作者信息
 FILE_PATH="/etc/openwrt_release"
-NEW_DESCRIPTION="Compiled by github"
+NEW_DESCRIPTION="2025.3.20 /"
 sed -i "s/DISTRIB_DESCRIPTION='[^']*'/DISTRIB_DESCRIPTION='$NEW_DESCRIPTION'/" "$FILE_PATH"
 
 exit 0
