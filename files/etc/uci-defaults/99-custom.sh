@@ -97,7 +97,8 @@ fi
 # 设置dnsmasq绑定非全部地址<去掉单选框>
 uci set dhcp.@dnsmasq[0].nonwildcard='0'
 # 流量卸载类型设为软件
-firewall.@defaults[0].flow_offloading='1'
+uci set firewall.@defaults[0].flow_offloading='1'
+uci set firewall.@defaults[0].flow_offloading_hw='0'
 # WAN口获取IPv6地址设为禁用
 uci set network.wan.ipv6='0'
 
