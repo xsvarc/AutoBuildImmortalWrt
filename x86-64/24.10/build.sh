@@ -51,6 +51,7 @@ PACKAGES="$PACKAGES luci-i18n-upnp-zh-cn"
 PACKAGES="$PACKAGES luci-proto-wireguard"
 PACKAGES="$PACKAGES luci-i18n-ddns-zh-cn"
 PACKAGES="$PACKAGES ddns-scripts-cloudflare"
+PACKAGES="$PACKAGES ddns-scripts-dnspod"
 PACKAGES="$PACKAGES luci-i18n-vlmcsd-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-wol-zh-cn"
 #PACKAGES="$PACKAGES luci-i18n-nlbwmon-zh-cn" #无法正常显示数据
