@@ -58,6 +58,8 @@ PACKAGES="$PACKAGES luci-i18n-wol-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-vnstat2-zh-cn"
 PACKAGES="$PACKAGES bind-dig"
 PACKAGES="$PACKAGES tcping"
+PACKAGES="$PACKAGES htop"
+PACKAGES="$PACKAGES procps-ng-ps"
 
 # 判断是否需要编译 Docker 插件
 if [ "$INCLUDE_DOCKER" = "yes" ]; then
