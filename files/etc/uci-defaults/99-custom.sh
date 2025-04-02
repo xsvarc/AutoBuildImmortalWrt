@@ -102,6 +102,9 @@ uci set firewall.@defaults[0].flow_offloading_hw='0'
 # WAN口获取IPv6地址设为禁用
 uci set network.wan.ipv6='0'
 
+# LCP响应故障发送12次间隔10秒
+uci set network.wan.keepalive='12 10'
+
 #禁用通告该设备为 IPv6 DNS 服务器
 uci del dhcp.lan.ra_slaac
 uci del dhcp.lan.dhcpv6
